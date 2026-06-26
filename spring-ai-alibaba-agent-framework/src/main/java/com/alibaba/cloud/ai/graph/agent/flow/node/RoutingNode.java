@@ -187,7 +187,7 @@ public class RoutingNode implements MultiCommandAction {
 					List<Message> messagesWithFeedback = new ArrayList<>();
 					boolean systemMessageFound = false;
 
-					for (Message msg : messages) {
+					for (var msg : messages) {
 						if (msg instanceof SystemMessage && !systemMessageFound) {
 							String enhancedContent = msg.getText() + "\n\n" + errorFeedback;
 							messagesWithFeedback.add(new SystemMessage(enhancedContent));
