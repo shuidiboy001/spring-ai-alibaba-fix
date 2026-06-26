@@ -130,15 +130,15 @@
 
     <reporting>
         <plugins>
-            <plugin>
+<!--            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <configuration>
-                    <!-- Specify the Java version
+                    &lt;!&ndash; Specify the Java version
                     <source>1.8</source>
-                    -->
+                    &ndash;&gt;
                 </configuration>
-            </plugin>
+            </plugin>-->
         </plugins>
     </reporting>
 </project>
