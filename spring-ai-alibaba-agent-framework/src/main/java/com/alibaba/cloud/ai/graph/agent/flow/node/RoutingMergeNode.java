@@ -113,8 +113,13 @@ public class RoutingMergeNode implements NodeAction {
 		if (messages.isEmpty()) {
 			return "";
 		}
-		Message last = messages.get(messages.size() - 1);
-		return last.getText() != null ? last.getText() : "";
+		for (int i = messages.size() - 1; i >= 0; i--) {
+			Object item = messages.get(i);
+			if (item instanceof Message msg) {
+				return msg.getText()==null?"" : msg.getText();
+			}
+		}
+		return  "";
 	}
 
 	private String synthesize(String query, List<String> formattedResults) {
